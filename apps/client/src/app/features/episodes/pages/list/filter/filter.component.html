@@ -1,0 +1,31 @@
+<ng-container
+  *ngIf="{
+    form: form
+  } as vm">
+  <form [formGroup]="vm.form">
+    <div class="row g-2">
+      <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+        <nb-form-field>
+          <input
+            type="text"
+            inputmode="search"
+            [placeholder]="'NAME' | transloco"
+            nbInput
+            fullWidth
+            formControlName="name" />
+        </nb-form-field>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+        <nb-form-field>
+          <input
+            type="text"
+            inputmode="search"
+            [placeholder]="'EPISODE' | transloco"
+            nbInput
+            fullWidth
+            formControlName="episode" />
+        </nb-form-field>
+      </div>
+    </div>
+  </form>
+</ng-container>

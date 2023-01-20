@@ -1,0 +1,15 @@
+<ng-container *ngIf="{episode: item$ | async, characters: characters$ | async} as vm">
+  <lib-card class="mb-4">
+    <h1 class="mb-3">{{ vm.episode.episode }}</h1>
+    <p class="text-hint mb-0">{{ 'NAME' | transloco }}:</p>
+    <h5>{{ vm.episode.name || '--' }}</h5>
+    <p class="text-hint mb-0">{{ 'AIR_DATE' | transloco }}:</p>
+    <h5>{{ (vm.episode.air_date | date) || '--' }}</h5>
+    <div class="d-flex align-items-center gap-3 pt-3">
+      <lib-source-button [data]="vm.episode | formatJson"></lib-source-button>
+      <lib-favorite-button [id]="vm.episode.id" type="episodes"></lib-favorite-button>
+    </div>
+  </lib-card>
+  <h2 class="mb-4">{{ 'CHARACTERS' | transloco }}</h2>
+  <lib-characters-list [items]="vm.characters"></lib-characters-list>
+</ng-container>
