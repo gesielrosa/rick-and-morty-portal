@@ -21,7 +21,7 @@ Clone the repository and install the dependencies.
 
 ```bash
 git clone
-cd rick-and-morty
+cd rick-and-morty-portal
 npm install --legacy-peer-deps
 ```
 
