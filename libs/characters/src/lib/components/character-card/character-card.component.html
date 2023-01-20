@@ -1,0 +1,19 @@
+<lib-card>
+  <div class="row align-items-center">
+    <div class="col-4">
+      <lib-avatar [image]="image"></lib-avatar>
+    </div>
+    <div class="col-8 align-self-start">
+      <h5 class="mb-0 d-flex align-items-center justify-content-between flex-wrap">
+        {{ name }}
+        <lib-favorite-button [id]="id" type="characters"></lib-favorite-button>
+      </h5>
+      <div class="text-muted">
+        <div statusColor [status]="status">{{ status | uppercase | transloco }}</div>
+        <div>{{ species }}</div>
+        <div>{{ gender }}</div>
+        <div></div>
+      </div>
+    </div>
+  </div>
+</lib-card>
