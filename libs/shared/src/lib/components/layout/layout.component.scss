@@ -1,0 +1,28 @@
+:host {
+  .header {
+    &-logo {
+      img {
+        max-height: 48px;
+        min-height: 48px;
+        filter: brightness(1000%);
+      }
+    }
+
+    &-right {
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+
+    &-menu-toggle {
+      a {
+        cursor: pointer;
+      }
+
+      nb-icon {
+        font-size: 1.75rem;
+      }
+    }
+  }
+}

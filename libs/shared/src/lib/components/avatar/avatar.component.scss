@@ -1,0 +1,10 @@
+:host {
+  display: block;
+  background-image: var(--avatar-image-url);
+  background-size: cover;
+  background-position: center;
+  border-radius: var(--card-border-radius);
+  aspect-ratio: 1 / 1;
+  width: 100%;
+  max-width: 100%;
+}

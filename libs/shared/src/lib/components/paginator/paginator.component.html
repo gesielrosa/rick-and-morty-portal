@@ -1,0 +1,11 @@
+<ng-container *ngIf="totalItems">
+  <div class="paginator-controls">
+    <button nbButton status="primary" size="tiny" [disabled]="!hasPreviousPage" (click)="previousPage()">
+      <nb-icon icon="arrow-ios-back-outline"></nb-icon>
+    </button>
+    <div class="paginator-controls-info">{{ currentPage }} {{ ofText }} {{ totalPages }}</div>
+    <button nbButton status="primary" size="tiny" [disabled]="!hasNextPage" (click)="nextPage()">
+      <nb-icon icon="arrow-ios-forward-outline"></nb-icon>
+    </button>
+  </div>
+</ng-container>

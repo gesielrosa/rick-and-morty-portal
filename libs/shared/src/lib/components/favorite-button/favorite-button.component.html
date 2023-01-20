@@ -1,0 +1,3 @@
+<ng-container *ngIf="{isFavorite: isFavorite$ | async} as vm">
+  <nb-icon status="primary" [icon]="vm.isFavorite ? 'heart' : 'heart-outline'"></nb-icon>
+</ng-container>

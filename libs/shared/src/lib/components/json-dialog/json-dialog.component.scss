@@ -1,0 +1,12 @@
+:host {
+  display: block;
+  width: 80vw;
+  max-width: 900px;
+
+  nb-card-footer {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+}

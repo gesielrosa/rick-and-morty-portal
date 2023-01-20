@@ -1,0 +1,23 @@
+<ng-container *ngIf="{menuItems: menuItems$ | async} as vm">
+  <nb-layout>
+    <nb-layout-header fixed>
+      <div class="header-logo">
+        <img src="assets/images/logo-icon.png" alt="Rick and Morty App" />
+      </div>
+      <div class="header-right">
+        <lib-lang-switch></lib-lang-switch>
+        <div class="header-menu-toggle d-inline d-sm-none">
+          <a (click)="toggleSidebar()"><nb-icon icon="menu-2-outline"></nb-icon></a>
+        </div>
+      </div>
+    </nb-layout-header>
+    <nb-sidebar tag="menu-sidebar" responsive>
+      <nb-menu [items]="vm.menuItems"></nb-menu>
+    </nb-sidebar>
+    <nb-layout-column>
+      <main>
+        <ng-content select="[slot=main]"></ng-content>
+      </main>
+    </nb-layout-column>
+  </nb-layout>
+</ng-container>

@@ -1,0 +1,18 @@
+<ng-container
+  *ngIf="{
+    data: data
+  } as vm">
+  <nb-card>
+    <nb-card-header>
+      {{ 'SOURCE_DATA' | transloco }}
+    </nb-card-header>
+    <nb-card-body>
+      <textarea rows="12" readonly nbInput fullWidth [value]="vm.data"></textarea>
+    </nb-card-body>
+    <nb-card-footer>
+      <button type="button" size="small" status="primary" nbButton (click)="close()">
+        {{ 'CLOSE' | transloco }}
+      </button>
+    </nb-card-footer>
+  </nb-card>
+</ng-container>

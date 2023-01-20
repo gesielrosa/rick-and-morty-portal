@@ -1,0 +1,6 @@
+<ng-container *ngIf="{languages: languages, active: activeLanguage$ | async} as vm">
+  <ng-container *ngFor="let lang of vm.languages; let last = last">
+    <a [class.text-primary]="lang === vm.active" (click)="setLanguage(lang)">{{ lang | uppercase }}</a>
+    <span class="px-1 text-disabled" *ngIf="!last">|</span>
+  </ng-container>
+</ng-container>

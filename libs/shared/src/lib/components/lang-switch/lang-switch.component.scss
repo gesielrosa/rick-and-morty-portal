@@ -1,0 +1,13 @@
+:host {
+  display: block;
+
+  a {
+    color: var(--text-hint-color);
+    cursor: pointer;
+    text-decoration: none;
+
+    &:hover {
+      color: var(--color-basic-100);
+    }
+  }
+}
