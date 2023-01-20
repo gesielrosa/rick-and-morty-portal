@@ -1,0 +1,11 @@
+<ng-container *ngIf="{items: items$ | async, filter: filter$ | async, pagination: pagination$ | async} as vm">
+  <h1 class="fw-semibold mb-4">{{ 'CHARACTERS' | transloco }}</h1>
+  <app-filter [filter]="vm.filter" (filterChange)="onFilterChange($event)"></app-filter>
+  <lib-characters-list [items]="vm.items"></lib-characters-list>
+  <lib-paginator
+    [totalItems]="vm.pagination.total"
+    [totalPages]="vm.pagination.pages"
+    [currentPage]="vm.pagination.page"
+    [ofText]="'OF' | transloco"
+    (changePage)="onPageChange($event)"></lib-paginator>
+</ng-container>

@@ -1,0 +1,59 @@
+<ng-container
+  *ngIf="{
+    form: form
+  } as vm">
+  <form [formGroup]="vm.form">
+    <div class="row g-2">
+      <div class="col-12 col-md-6 col-lg-4 col-xl">
+        <nb-select [placeholder]="'GENDER' | transloco" fullWidth formControlName="gender">
+          <nb-option [value]="'male'">{{ 'MALE' | transloco }}</nb-option>
+          <nb-option [value]="'female'">{{ 'FEMALE' | transloco }}</nb-option>
+          <nb-option [value]="'genderless'">{{ 'GENDERLESS' | transloco }}</nb-option>
+          <nb-option [value]="'unknown'">{{ 'UNKNOWN' | transloco }}</nb-option>
+          <nb-option [value]="null">{{ 'CLEAN' | transloco }}</nb-option>
+        </nb-select>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4 col-xl">
+        <nb-select [placeholder]="'STATUS' | transloco" fullWidth formControlName="status">
+          <nb-option [value]="'alive'">{{ 'ALIVE' | transloco }}</nb-option>
+          <nb-option [value]="'dead'">{{ 'DEAD' | transloco }}</nb-option>
+          <nb-option [value]="'unknown'">{{ 'UNKNOWN' | transloco }}</nb-option>
+          <nb-option [value]="null">{{ 'CLEAN' | transloco }}</nb-option>
+        </nb-select>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4 col-xl">
+        <nb-form-field>
+          <input
+            type="text"
+            inputmode="search"
+            [placeholder]="'NAME' | transloco"
+            nbInput
+            fullWidth
+            formControlName="name" />
+        </nb-form-field>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4 col-xl">
+        <nb-form-field>
+          <input
+            type="text"
+            inputmode="search"
+            [placeholder]="'SPECIE' | transloco"
+            nbInput
+            fullWidth
+            formControlName="species" />
+        </nb-form-field>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4 col-xl">
+        <nb-form-field>
+          <input
+            type="text"
+            inputmode="search"
+            [placeholder]="'TYPE' | transloco"
+            nbInput
+            fullWidth
+            formControlName="type" />
+        </nb-form-field>
+      </div>
+    </div>
+  </form>
+</ng-container>

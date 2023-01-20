@@ -1,0 +1,37 @@
+<ng-container *ngIf="{character: item$ | async, episodes: episodes$ | async} as vm">
+  <lib-card class="mb-4">
+    <div class="row g-4">
+      <div class="col-12 col-md-3 col-lx-2">
+        <lib-avatar [image]="vm.character.image"></lib-avatar>
+      </div>
+      <div class="col">
+        <h1 class="mb-2">{{ vm.character.name }}</h1>
+        <p>
+          <span statusColor [status]="vm.character.status">{{ vm.character.status | uppercase | transloco }}</span>
+        </p>
+        <p class="text-hint mb-0">{{ 'GENDER' | transloco }}:</p>
+        <h5>{{ vm.character.gender || '--' }}</h5>
+        <p class="text-hint mb-0">{{ 'SPECIE' | transloco }}:</p>
+        <h5>{{ vm.character.species || '--' }}</h5>
+        <p class="text-hint mb-0">{{ 'ORIGIN' | transloco }}:</p>
+        <h5>
+          <a class="link-primary" [routerLink]="['/', 'locations', vm.character.origin?.url | extractId]">
+            {{ vm.character.origin?.name || '--' }}
+          </a>
+        </h5>
+        <p class="text-hint mb-0">{{ 'LAST_LOCATION' | transloco }}:</p>
+        <h5>
+          <a class="link-primary" [routerLink]="['/', 'locations', vm.character.location?.url | extractId]">
+            {{ vm.character.location?.name || '--' }}
+          </a>
+        </h5>
+        <div class="d-flex align-items-center gap-3 pt-3">
+          <lib-source-button [data]="vm.character | formatJson"></lib-source-button>
+          <lib-favorite-button [id]="vm.character.id" type="characters"></lib-favorite-button>
+        </div>
+      </div>
+    </div>
+  </lib-card>
+  <h2 class="mb-4">{{ 'EPISODES' | transloco }}</h2>
+  <lib-episodes-list [items]="vm.episodes"></lib-episodes-list>
+</ng-container>
