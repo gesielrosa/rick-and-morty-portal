@@ -1,0 +1,15 @@
+<ng-container *ngIf="{location: item$ | async, characters: characters$ | async} as vm">
+  <lib-card class="mb-4">
+    <h1 class="mb-3">{{ vm.location.name }}</h1>
+    <p class="text-hint mb-0">{{ 'TYPE' | transloco }}:</p>
+    <h5>{{ vm.location.type || '--' }}</h5>
+    <p class="text-hint mb-0">{{ 'DIMENSION' | transloco }}:</p>
+    <h5>{{ vm.location.dimension || '--' }}</h5>
+    <div class="d-flex align-items-center gap-3 pt-3">
+      <lib-source-button [data]="vm.location | formatJson"></lib-source-button>
+      <lib-favorite-button [id]="vm.location.id" type="locations"></lib-favorite-button>
+    </div>
+  </lib-card>
+  <h2 class="mb-4">{{ 'RESIDENTS' | transloco }}</h2>
+  <lib-characters-list [items]="vm.characters"></lib-characters-list>
+</ng-container>
