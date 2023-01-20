@@ -1,0 +1,11 @@
+:host {
+  display: block;
+  height: 100%;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: border-color 300ms ease-in-out;
+
+  &:hover {
+    border-color: var(--color-primary-default-border);
+  }
+}

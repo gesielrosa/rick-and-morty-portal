@@ -1,0 +1,10 @@
+<lib-card>
+  <h5 class="mb-0 d-flex align-items-center justify-content-between flex-wrap">
+    {{ episode }}
+    <lib-favorite-button [id]="id" type="episodes"></lib-favorite-button>
+  </h5>
+  <p class="text-hint mb-0">{{ 'NAME' | transloco }}:</p>
+  <h6>{{ name }}</h6>
+  <p class="text-hint mb-0">{{ 'AIR_DATE' | transloco }}:</p>
+  <h6>{{ airDate | date }}</h6>
+</lib-card>
