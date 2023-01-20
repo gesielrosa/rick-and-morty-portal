@@ -1,1 +1,13 @@
+@use 'styles/theme' as *;
+
+@use '@nebular/theme/styles/globals' as *;
+
+@include nb-install() {
+  @include nb-theme-global();
+}
+
 /* You can add global styles to this file, and also import other style files */
+@import 'styles/bootstrap';
+@import 'styles/global';
+@import 'styles/loader';
+@import 'styles/scroll';

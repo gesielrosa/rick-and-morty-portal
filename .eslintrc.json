@@ -18,7 +18,49 @@
               }
             ]
           }
-        ]
+        ],
+        "@typescript-eslint/semi": ["error"],
+        "indent": ["error", 2, {"SwitchCase": 1}],
+        "keyword-spacing": [
+          "error",
+          {
+            "before": true,
+            "after": true
+          }
+        ],
+        "space-before-function-paren": [
+          "error",
+          {
+            "anonymous": "never",
+            "named": "never",
+            "asyncArrow": "always"
+          }
+        ],
+        "object-curly-spacing": ["error", "never"],
+        "array-bracket-spacing": ["error", "never"],
+        "space-in-parens": ["error", "never"],
+        "space-before-blocks": ["error"],
+        "comma-spacing": [
+          2,
+          {
+            "before": false,
+            "after": true
+          }
+        ],
+        "no-multi-spaces": ["error"],
+        "quotes": ["error", "single"],
+        "key-spacing": [
+          "error",
+          {
+            "beforeColon": false
+          }
+        ],
+        "padded-blocks": ["error", "never"],
+        "array-element-newline": ["error", "consistent"],
+        "@typescript-eslint/no-explicit-any": "off",
+        "@typescript-eslint/explicit-function-return-type": ["error"],
+        "@typescript-eslint/explicit-member-accessibility": ["error"],
+        "@angular-eslint/no-input-rename": "off"
       }
     },
     {

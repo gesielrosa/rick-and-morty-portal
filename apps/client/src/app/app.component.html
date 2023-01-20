@@ -1,1 +1,5 @@
-<rick-and-morty-nx-welcome></rick-and-morty-nx-welcome>
+<ng-container *ngIf="{menuItems: menuItems$ | async} as vm">
+  <lib-layout [menuItems]="vm.menuItems">
+    <router-outlet slot="main"></router-outlet>
+  </lib-layout>
+</ng-container>

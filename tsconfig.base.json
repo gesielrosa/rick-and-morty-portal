@@ -13,8 +13,16 @@
     "lib": ["es2017", "dom"],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
+    "strictPropertyInitialization": false,
+    "strictNullChecks": false,
+    "noImplicitAny": false,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@libs/shared": ["libs/shared/src/index.ts"],
+      "@libs/characters": ["libs/characters/src/index.ts"],
+      "@libs/episodes": ["libs/episodes/src/index.ts"],
+      "@libs/locations": ["libs/locations/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

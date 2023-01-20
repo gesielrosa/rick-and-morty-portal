@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
-  "npmScope": "rick-and-morty",
+  "npmScope": "app",
   "tasksRunnerOptions": {
     "default": {
       "runner": "nx/tasks-runners/default",
