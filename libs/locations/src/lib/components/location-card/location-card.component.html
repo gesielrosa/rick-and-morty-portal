@@ -1,0 +1,10 @@
+<lib-card>
+  <h5 class="mb-0 d-flex align-items-center justify-content-between flex-wrap">
+    {{ name }}
+    <lib-favorite-button [id]="id" type="locations"></lib-favorite-button>
+  </h5>
+  <p class="text-hint mb-0">{{ 'TYPE' | transloco }}:</p>
+  <h6>{{ type }}</h6>
+  <p class="text-hint mb-0">{{ 'DIMENSION' | transloco }}:</p>
+  <h6>{{ dimension }}</h6>
+</lib-card>
