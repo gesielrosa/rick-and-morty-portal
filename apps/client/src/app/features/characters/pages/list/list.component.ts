@@ -5,7 +5,7 @@ import {TranslocoModule} from '@ngneat/transloco';
 import {BaseComponent, ComponentStore, GrPaginatorComponent, PaginationInfo} from '@libs/shared';
 import {Character, CharacterFilter, CharactersListComponent, CharactersService} from '@libs/characters';
 
-import {FilterComponent} from './filter';
+import {FilterComponent} from '../../components';
 
 @Component({
   standalone: true,
