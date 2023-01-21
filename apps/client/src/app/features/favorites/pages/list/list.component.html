@@ -2,13 +2,13 @@
   *ngIf="{characters: characters$ | async, episodes: episodes$ | async, locations: locations$ | async} as vm">
   <h1 class="fw-semibold mb-4">{{ 'FAVORITES' | transloco }}</h1>
   <nb-tabset>
-    <nb-tab responsive [tabTitle]="'CHARACTERS' | transloco">
+    <nb-tab responsive tabIcon="people-outline" [tabTitle]="'CHARACTERS' | transloco">
       <lib-characters-list [items]="vm.characters"></lib-characters-list>
     </nb-tab>
-    <nb-tab responsive [tabTitle]="'EPISODES' | transloco">
+    <nb-tab responsive tabIcon="film-outline" [tabTitle]="'EPISODES' | transloco">
       <lib-episodes-list [items]="vm.episodes"></lib-episodes-list>
     </nb-tab>
-    <nb-tab responsive [tabTitle]="'LOCATIONS' | transloco">
+    <nb-tab responsive tabIcon="pin-outline" [tabTitle]="'LOCATIONS' | transloco">
       <lib-locations-list [items]="vm.locations"></lib-locations-list>
     </nb-tab>
   </nb-tabset>
