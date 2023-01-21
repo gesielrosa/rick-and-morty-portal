@@ -8,12 +8,12 @@ This is a simple web app that uses the Rick and Morty API to display characters,
 
 ## Technologies
 
-- Angular 15
-- NX Workspace
-- Nebular
-- Bootstrap
-- ApexCharts
-- RxJS
+- [Angular 15](https://angular.io/)
+- [NX](https://nx.dev/)
+- [Nebular](https://akveo.github.io/nebular/)
+- [Bootstrap](https://getbootstrap.com/)
+- [ApexCharts](https://apexcharts.com/)
+- [RxJS](https://rxjs.dev/)
 
 ## Installation
 
